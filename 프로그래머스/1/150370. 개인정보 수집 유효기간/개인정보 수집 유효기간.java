@@ -4,24 +4,15 @@ class Solution {
         Boolean[] checked = new Boolean[privacies.length];
         for (int i = 0; i < privacies.length; i++)
             checked[i] = true;
-
         String[] Tymd = today.split("\\.");
-
         String[][] t = new String[terms.length][];
-
         int cnt = 0;
-
         for(String term : terms)
             t[cnt++] = term.split(" ");
-
-
         String[][] p = new String[privacies.length][];
         cnt = 0;
-
         for(String privacie : privacies)
             p[cnt++] = privacie.split(" ");
-
-
         for(int i = 0; i < privacies.length; i++) {
             for (int j = 0; j < t.length; j++) {
                 if(p[i][1].equals(t[j][0])) {
@@ -62,7 +53,6 @@ class Solution {
         for (int i = 0; i < privacies.length; i++)
             if(checked[i])
                 answer[n++] = i+1;
-
         return answer;
     }
 }
